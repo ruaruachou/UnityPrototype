@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerContraller : MonoBehaviour
+public class PlayerContraller1 : MonoBehaviour
 {
     public float speed = 5f;
     public float turnSpeed=10f;
@@ -19,8 +19,8 @@ public class PlayerContraller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hor = Input.GetAxis("Horizontal");//转向
-        forwardInput = Input.GetAxis("Vertical");//如果不加入这个变量,车辆就只会往前走
+        hor = Input.GetAxis("Horizontal1");//转向
+        forwardInput = Input.GetAxis("Vertical1");//如果不加入这个变量,车辆就只会往前走
         //控制车辆
         transform.Translate(Vector3.forward*Time.deltaTime*speed*forwardInput);
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed*hor);
